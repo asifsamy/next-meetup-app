@@ -54,7 +54,7 @@ export async function getStaticProps() {
 
   const meetupsCollection = db.collection("meetups");
 
-  const meetups = await meetupsCollection.find().toArray();
+  const meetups = await meetupsCollection.find().sort({ _id: -1 }).toArray();
 
   client.close();
 
@@ -67,7 +67,7 @@ export async function getStaticProps() {
         id: meetup._id.toString(),
       })),
     },
-    revalidate: 10,
+    revalidate: 1,
     /**
      * here, "revalidate: 1" means every 1 seconds the page will be pre-generated
      * Not only in the build process but also after the deployment with the change of data
