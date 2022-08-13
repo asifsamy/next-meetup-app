@@ -54,7 +54,7 @@ export async function getServerSideProps(context) {
   if (!session) {
     return {
       redirect: {
-        destination: `/api/auth/signin?callbackUrl=http://localhost:3000/new-meetup`,
+        destination: `/api/auth/signin?callbackUrl=${window.location.origin}/new-meetup`,
         permanent: false,
       },
     };
