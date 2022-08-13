@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Modal from "../ui/Modal";
-import EditMeetupForm from "./editMeetupForm";
+import EditMeetupForm from "./EditMeetupForm";
 import classes from "./MyMeetups.module.css";
 
 function MyMeetupItem(props) {
