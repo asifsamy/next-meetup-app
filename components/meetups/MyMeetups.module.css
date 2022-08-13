@@ -1,0 +1,11 @@
+.table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.col {
+  padding: 5px 15px 5px 15px;
+  background-color: rgb(190, 219, 236);
+  border: 1px solid #fff;
+  width: 50%;
+}
