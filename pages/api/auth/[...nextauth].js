@@ -38,6 +38,7 @@ export default NextAuth({
       },
     }),
   ],
+  secret: "AJdiwoq923kw",
   pages: {
     signIn: "/auth/login",
   },
