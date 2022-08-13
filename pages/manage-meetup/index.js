@@ -24,7 +24,7 @@ export async function getServerSideProps(context) {
   if (!session) {
     return {
       redirect: {
-        destination: `/api/auth/signin?callbackUrl=${window.location.origin}/manage-meetup`,
+        destination: `/api/auth/signin?callbackUrl=${APP_URL}/manage-meetup`,
         permanent: false,
       },
     };
